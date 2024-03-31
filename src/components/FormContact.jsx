@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import qs from 'qs';
 import 'bootstrap/dist/css/bootstrap.css'
 function FormContact() {
 
 
-    const [name, setName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
 
-  const handleSubmit = () => {
+  const handleSubmit =  async () => {
     const formData = {
-      name: name,
-      email: email,
+      nombre: name,
+      mail: email,
       message: message
     };
-    console.log(formData);
-    // Aquí puedes proceder a hacer lo que quieras con los datos del formulario
+    try {
+      const response = await axios.post('http://localhost:3000/send', qs.stringify(formData), {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+      console.log('Respuesta del servidor:', response.data);
+      // Puedes hacer algo con la respuesta del servidor aquí, si es necesario
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      // Puedes manejar el error aquí, si es necesario
+    }
   };
   return (
     <div>
