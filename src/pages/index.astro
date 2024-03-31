@@ -6,16 +6,54 @@ import Footer from '../components/Footer.astro';
 import FormContact from '../components/FormContact';
 import 'bootstrap/dist/css/bootstrap.css'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import Card from '../components/Card.astro';
+import type { Props as CardType } from '../components/Card.astro';
+const cards: CardType[] = [
+  {
+    img: '/img/placeholder1.jpg',
+    alt: 'Product image',
+    title: 'Product 1',
+    text: 'Body text for product',
+    href: 'http://google.com',
+    linkText: 'Read more',
+  },
+  {
+    img: '/img/placeholder1.jpg',
+    alt: 'Product image',
+    title: 'Product 2',
+    text: 'Body text for product',
+    href: 'http://google.com',
+    linkText: 'Read more',
+  },
+  {
+    img: '/img/placeholder1.jpg',
+    alt: 'Product image',
+    title: 'Product 3',
+    text: 'Body text for product',
+    href: 'http://google.com',
+    linkText: 'Read more',
+  },
+];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	</head>
 	<body>
 		<Header />
 		<main>
+
+
+			<div class="container">
+				<div class="row row-cols-1 row-cols-md-3">
+				 
+				</div>
+			  </div>
 
 		<FormContact client:load/>
 
