@@ -2,7 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormContact from '../components/FormContact.astro';
+
+import FormContact from '../components/FormContact';
 import 'bootstrap/dist/css/bootstrap.css'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -16,7 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 
-		<FormContact/>
+		<FormContact client:load/>
 
 		</main>
 		<Footer />
