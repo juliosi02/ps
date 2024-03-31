@@ -2,10 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
+import Card from '../components/Card.astro';
 import FormContact from '../components/FormContact';
+import Carousel from '../components/Carousel.astro';
 import 'bootstrap/dist/css/bootstrap.css'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+<<<<<<< HEAD
 
 import Card from '../components/Card.astro';
 import type { Props as CardType } from '../components/Card.astro';
@@ -35,18 +37,55 @@ const cards: CardType[] = [
     linkText: 'Read more',
   },
 ];
+=======
+import Aliadosc from '../components/aliadosc.astro';
+>>>>>>> 317fa96 (ss)
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<<<<<<< HEAD
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+=======
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+>>>>>>> 317fa96 (ss)
 	</head>
 	<body>
-		<Header />
+		
+		<section>
+			<Header />
+			<Carousel/>
+		</section>
+
+		<section id="#Servicios">
+			<Card/>
+		</section>
+		
+		<section id="#Projects">
+			<Card/>
+		</section>
+
+		<section id="#organization">
+
+		</section>
+
+		<section>
+
+		</section>
+
+		<section id=" aliadoscomerciales">
+			<Aliadosc/>
+		</section>
+
+
 		<main>
+<<<<<<< HEAD
 
 
 			<div class="container">
@@ -57,7 +96,14 @@ const cards: CardType[] = [
 
 		<FormContact client:load/>
 
+=======
+			<section id="#contact">
+				<FormContact client:load/>
+			</section>
+>>>>>>> 317fa96 (ss)
 		</main>
+
 		<Footer />
+
 	</body>
 </html>
