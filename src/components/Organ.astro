@@ -1,0 +1,144 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 container-primeracolumna">
+        <p class="text-center">
+          Discover how our passion for innovation and safety drives us to reach
+          new heights in every project we undertake.
+        </p>
+        <h4>We Break Limits</h4>
+        <h4>Unlimited</h4>
+        <p class="segundoP">
+          Discover how our passion for innovation and excellence drives us to push
+          the limits in every aspect of our operation. We are committed to
+          challenging convention and constantly seeking new ways to achieve
+          success. In everything we do, our dedication to quality and creativity
+          drives us to new heights. Join us on our journey into the limitless.!
+        </p>
+        <div class="row contenedor-items">
+          <div class="col-md-4 contenedor-elemento">
+            <div class="contenedor-img">
+              <img src="vehicle.svg" class="icon-footer" alt="" />
+              <p class="p-icon">Available vehicles</p>
+              <h5 class="counter" id="counter0"></h5>
+            </div>
+          </div>
+          <div class="col-md-4 contenedor-elemento">
+            <div class="contenedor-img">
+              <img src="building.svg" class="icon-footer" alt="" />
+              <p class="p-icon">Operational Areas</p>
+              <h5 class="counter" id="counter2"></h5>
+            </div>
+          </div>
+          <div class="col-md-4 contenedor-elemento">
+            <div class="contenedor-img">
+              <img src="helmet.svg" class="icon-footer" alt="" />
+              <p class="p-icon">Workers</p>
+              <h5 class="counter" id="counter3"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="0303.webp" alt="" />
+      </div>
+    </div>
+</div>
+  
+  <style>
+    .p-icon {
+      font-size: 1.8rem;
+    }
+    h5 {
+      color: white;
+      font-size: 2.3rem;
+    }
+    /* Estilos personalizados */
+    section {
+      padding: 50px 0; /* Ajustado para que no haya espacio adicional en los lados */
+      height: 20dvh;
+    }
+    .contenedor-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon-footer {
+      height: 60px;
+      width: 60px;
+    }
+  
+    .container-primeracolumna {
+      background-color: #00ccff;
+      margin: 0;
+      padding: 0; /* Elimina el padding */
+    }
+    .container-fluid .row {
+      display: flex;
+      justify-content: center;
+      margin: 0; /* Elimina el margen */
+    }
+    .segundoP {
+      color: gainsboro;
+    }
+    h4 {
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+      font-size: 2.5em;
+    }
+    p {
+      margin-top: 10px;
+      text-align: center;
+      text-wrap: balance;
+      color: white;
+      font-size: 1.2rem;
+    }
+    .container-fluid .row .col-md-6 {
+      display: flex;
+      flex-direction: column;
+      height: 70dvh;
+      margin: 0; /* Elimina el margen */
+      padding: 0; /* Elimina el padding */
+    }
+  
+    img {
+      max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+      height: 100%; /* Mantiene la proporción de la imagen */
+      object-fit: cover;
+    }
+    @media (max-width: 780px){
+      .p-icon{
+        font-size: 1.5rem;
+      }
+      .icon-footer{
+        height: 50px;
+        width: 50px;
+      }
+      .counter{
+        font-size: 1.4rem;
+      }
+      .container-fluid .row .col-md-6 {
+        height: 100dvh;
+      }
+    }
+    @media (max-width: 576px) {
+      .icon-footer {
+        height: 40px;
+        width: 40px;
+      }
+      .p-icon {
+        font-size: 1.2rem;
+      }
+      .contenedor-items > div {
+        flex: 0 0 50%;
+        max-width: 30%;
+      }
+      .container-fluid .row .col-md-6 {
+        height: 100dvh;
+      }
+      .counter{
+        font-size: 1.2rem;
+      }
+    }
+  </style>

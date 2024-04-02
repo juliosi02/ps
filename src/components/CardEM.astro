@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+	Data: string;
+    img: string;
+	
+}
+
+const { Data, title, img } = Astro.props;
+---
+
+<div class="contenedor"> <!-- Corregido aquí -->
+    <div class="container-img">
+        <img src={img} alt=""/>
+    </div>
+    <div>
+        <h4>{title}</h4>
+        <p>{Data}</p>
+    </div>
+</div>
+
+<style>
+    .contenedor { /* Corregido aquí */
+        width: 250px;
+        margin: 0 auto;
+    }
+    .container-img {
+        height: 100%;
+        width: 100%;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+</style>
