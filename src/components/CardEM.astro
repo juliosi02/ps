@@ -23,12 +23,32 @@ const { Data, title, img } = Astro.props;
     .contenedor { /* Corregido aquí */
         width: 250px;
         margin: 0 auto;
+        outline: 2px solid black;
+        border-radius: 25px;
+        padding: 20px;
+        border-bottom-right-radius: 80px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        transition: all 0.4s;
+    }
+    .contenedor:hover{
+        transform: translateY(-10px);
     }
     .container-img {
         height: 100%;
         width: 100%;
+        overflow: hidden;
+
+    }
+    p{
+        text-align: center;
+    }
+    img:hover{
+        border-radius: 25px;
+        transform: scale(1.2);
     }
     img {
+        transition: all 0.5s;
         height: 100%;
         width: 100%;
         border-radius: 50%;
