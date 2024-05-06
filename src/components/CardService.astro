@@ -1,92 +1,71 @@
 ---
-
 interface Props {
-    img :string;
-    title : string;
-    parraf : string;
-	date : string;
-    height :number;
-    width:number;
+  img: string;
+  title: string;
+  parraf: string;
+  date: string;
 }
 
-const {img,date,title,parraf,height,width} = Astro.props
+const { img, date, title, parraf } = Astro.props;
 ---
 
-<li>
-							
-<img width={width} height={height} src={img} alt="Proyectos PrestaServis RL" />
-<h4 class="title">{title}</h4>
-<p>{parraf}</p>
-<p class="date">
-    {date}
-</p>
+<div class="container card-container">
+  <div class="contenedor-img">
+    <img src={img} alt="Proyectos PrestaServis RL" />
+  </div>
 
-
-</li>
+  <div class="card-content">
+    <h4 class="title">{title}</h4>
+    <div class="contenedor-parrafo">
+      <p>{parraf}</p>
+    </div>
+  </div>
+</div>
 
 <style>
-    li {
-				width: calc(50% - 1rem);
-				margin: 0 auto;
+   .contenedor-parrafo {
+        max-height: 0; /* Oculta el contenedor de párrafo por defecto */
+        overflow: hidden; /* Oculta el contenido que sobresale */
+        transition: max-height 0.3s ease; /* Animación de transición */
     }
 
-    li * {
-				text-decoration: none;
-				transition: 0.2s ease;
+    .card-container:hover .contenedor-parrafo {
+        max-height: 1000px; /* Altura máxima del contenedor de párrafo al pasar el ratón */
     }
+  .card-container {
+    overflow: hidden; /* Para ocultar el contenido que sobresale */
 
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  }
 
-    ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
+  .card-container:hover {
+    max-height: 1000px; /* Altura máxima al pasar el ratón sobre la tarjeta */
+  } /* Altura máxima al pasar el ratón sobre la tarjeta */
+
+  .contenedor-img {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .card-content {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .date {
+    margin-bottom: 0;
+    color: #666;
+  }
 </style>
