@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import ContactCards from "../components/ContactCards.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import FormContact from "../components/FormContact";
+import Contenido from "../components/Contenido.astro";
 ---
 
 <!DOCTYPE html>
@@ -15,11 +16,13 @@ import FormContact from "../components/FormContact";
 	</head>
 	<body>
 		<Header />
+		<Contenido />
 		<main>
 			<ContactCards />
-			<br/><br/>
-			<FormContact />
+		<br/><br/>
+		<FormContact />
 		</main>
-		<Footer />
+		
 	</body>
+	<Footer />
 </html>

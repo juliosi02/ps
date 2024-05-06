@@ -16,7 +16,7 @@ const {img,date,title,parraf,height,width} = Astro.props
 							
 <img width={width} height={height} src={img} alt="Proyectos PrestaServis RL" />
 <h4 class="title">{title}</h4>
-<h4>{parraf}</h4>
+<p>{parraf}</p>
 <p class="date">
     {date}
 </p>
@@ -27,6 +27,7 @@ const {img,date,title,parraf,height,width} = Astro.props
 <style>
     li {
 				width: calc(50% - 1rem);
+				margin: 0 auto;
     }
 
     li * {

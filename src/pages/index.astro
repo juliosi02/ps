@@ -11,6 +11,7 @@ import Aliadosc from "../components/aliadosc.astro";
 import CardEM from "../components/CardEM.astro";
 import Organ from "../components/Organ.astro";
 import CardService from "../components/CardService.astro";
+import Contenido2 from '../components/Contenido2.astro';
 ---
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ import CardService from "../components/CardService.astro";
 
     <section id="Servicios">
       <h2 class="text-center">Servicios ofrecidos por la empresa</h2>
-br
+
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -161,61 +162,192 @@ br
     </div>
   </div>
 </div>
-
      
-
-     
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      
-      
-      
+   
     </section>
 
     <section id="Projects">
       <h2 class="text-center">Proyectos realizados por la empresa</h2>
 
       <div class="container">
-        <CardService
-          date=""
-          img="https://picsum.photos/200"
-          parraf=""
-          height={350}
-          width={320}
-          title=""
-        />
+        <div class="row">
+          <div class="col-md6">
+            <CardService
+            date=""
+            img="/SRC/proyectos (1).png"
+            parraf="Mantenimiento de valvulas de seguridad de control, Punta de mata Edo. Monagas"
+            height={350}
+            width={730}
+            title="Mantenimiento de válvulas de Seguridad y Válvulas de control"
+          />
+          </div>
+          <div class="col-md6">
+            <CardService
+            date=""
+            img="/SRC/proyectos (2).png"
+            parraf="Empalmes y Certificación de fibra optica en  Sinovensa 2022"
+            height={350}
+            width={730}
+            title="Empalmes y Certificación de fibra optica"
+          />
+          </div>
+          <div class="col-md6">
+            <CardService
+            date=""
+            img="/SRC/proyectos (3).png"
+            parraf="Mantenimiento de Valvulas de Seguridad PSV Petrocedeño-RAFAY Abril 2023"
+            height={350}
+            width={730}
+            title="Mantenimiento de Valvulas de Seguridad PSV"
+          />
+          </div>
+          <div class="col-md6">
+            <CardService
+            date=""
+            img="/SRC/proyectos (4).png"
+            parraf="Mantenimiento de valvulas de tapon para la linea reguladora de gas para turbogenerador TITAN. 2021. Fabricacion de Tuberia para linea reguladora de gas para turbogenerador TITAN Refineria Puerto La Cruz. Sandblasting y pintura de tuberia para linea dreguladora de gas para turbo generador TITAN"
+            height={350}
+            width={730}
+            title="Mantenimiento de válvulas, Fabricacion de tuberias, SandBlasting y pintura."
+          />
+          </div>
+         
+        </div>
+        
       </div>
+
+      <a href="/blog" class="btn btn-primary">Click aqui para mas información →</a>
     </section>
 
     <section id="organization">
       <h2 class="text-center">Equipos de La Empresa</h2>
       <div class="container">
-        <CardEM title="" Data="sisas" img="https://picsum.photos/200" />
+        <div class="text-center">
+          <p>Equipos de instrumentacion para la certificación de válvulas e instrumentos y pruebas de lazos con diferentes licencias en especial fudation fielbus</p>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/prueba de lazo (1).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/prueba de lazo (2).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/Imagen14.jpg" />
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="container">
+        <div class="text-center">
+          <p>Equipos para la certificacion y empalmes de fibra optica</p>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/fibra optica (1).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="Equipos" img="/SRC/fibra optica (2).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="Equipos" img="/SRC/fibra optica (3).png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center">
+          <p>Equipos para la certificación de Pruebas eléctricas</p>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/pruebas elect (1).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/pruebas elect (3).png" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/pruebas elect (2).png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center">
+          <p>Bancos de prueba para la certificación de valvulas de Seguridad y control hasta 24"</p>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/baco de prueba (1).jpg" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/baco de prueba (2).jpg" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="container">
+              <CardEM title="" Data="equipos" img="/SRC/baco de prueba (3).jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <Organ />
     </section>
 
-    <Organ />
     <br />
     <section id=" aliadoscomerciales">
       <Aliadosc />
     </section>
-
+    <Contenido2/>
     <main>
       <section id="contact">
         <FormContact client:load />
+        <div class="container text-center">
+          <a href="/contact" class="btn btn-primary">Click aqui para mas información →</a>
+        </div>
       </section>
     </main>
 
     <Footer />
   </body>
+  <style>
+    #organization{
+      padding-bottom: 3%;
+      padding-top: 5%;
+    }
+    .container{
+      padding-top: 4%;
+      padding-bottom: 4%;
+      align-items: center;
+    }
+    #Servicios{
+      padding-top: 3%;
+    }
+    .btn-primary {
+      text-align: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      max-width: 20%;
+    }
+  </style>
 </html>

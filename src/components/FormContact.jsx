@@ -41,7 +41,7 @@ function FormContact() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-      <label className="form-label" for="form4Example1">Name</label>
+      <label className="form-label" for="form4Example1">Nombre</label>
     </div>
   
    
@@ -53,7 +53,7 @@ function FormContact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-      <label className="form-label" for="form4Example2">Email address</label>
+      <label className="form-label" for="">Direccion E-mail</label>
     </div>
   
    
@@ -65,7 +65,7 @@ function FormContact() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-      <label className="form-label" for="form4Example3">Message</label>
+      <label className="form-label" for="form4Example3">Mensaje</label>
     </div>
   
     <button
