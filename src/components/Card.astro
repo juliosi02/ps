@@ -23,6 +23,10 @@ const { Data, title, img } = Astro.props;
     .contenedor { /* Corregido aquí */
         width: 250px;
         margin: 0 auto;
+        outline: 0.5px solid black;
+        border-radius: 15px;
+        padding-bottom: 10px;
+        box-shadow: 2px 2px 2px solid white;
     }
     .container-img {
         height: 100%;
@@ -32,5 +36,22 @@ const { Data, title, img } = Astro.props;
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+    @media (max-width: 412px){
+        .contenedor {
+            width: 150px;
+        }
+        .container-img {
+            height: 200px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        h4{
+            font-size: 0.8rem;
+        }
+
     }
 </style>

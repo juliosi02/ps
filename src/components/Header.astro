@@ -1,121 +1,223 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-	<nav>
+  <nav>
+    <div class="contenedor container-logo">
+      <h2>
+        <a href="/"
+          ><img src="public/PRESTASERVIS-BLUE.png" class="logoIMG" /></a>
+      </h2>
+    </div>
 
-		<div class="contenedor container-logo">
-			<h2><a href="/"><img src="public/PRESTASERVIS-BLUE.png" width="150px">{SITE_TITLE}</a></h2>
-		</div>
+    <div class="internal-links">
+      <HeaderLink href="/">Inicio</HeaderLink>
+      <HeaderLink href="/about">Acerca de</HeaderLink>
+      <HeaderLink href="/service">Servicios</HeaderLink>
+      <HeaderLink href="/blog">Proyectos</HeaderLink>
+      <HeaderLink href="/contact">Contacto</HeaderLink>
+    </div>
 
-		<div class="internal-links">
-			<HeaderLink href="/">Inicio</HeaderLink>
-			<HeaderLink href="/about">Acerca de</HeaderLink>
-			<HeaderLink href="/service">Servicios</HeaderLink>
-			<HeaderLink href="/blog">Proyectos</HeaderLink>
-			<HeaderLink href="/contact">Contacto</HeaderLink>
-		</div>
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="social-links">
+      <a href="" target="_blank">
+        <img src="public/PRESTASERVISRL-RED.png" class="LogoIMG2" />
+      </a>
+    </div>
+  </nav>
 
-		<div class="social-links">
-
-			<a href="" target="_blank">
-				<img src="public/PRESTASERVISRL-RED.png" width="150px">
-			</a>
-
-
-		</div>
-	</nav>
-
-	
   <!-- Background image -->
   <div
     id="intro-example"
-    class="p-5  text-center bg-image"
+    class="p-5 text-center bg-image backgroundimg"
     style="background-image: url('public/Captura de pantalla 2024-04-07 201533.png');"
   >
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">En PrestaServis RL estamos comprometidos con la Responsabilidad y la calidad en nuestros Servicios.</h1>
-          <h5 class="mb-4">Servicios de Calidad, Planificación, Ingenieria y ejecucion de Proyectos </h5>
+          <h1 class="mb-3">
+            En PrestaServis RL estamos comprometidos con la Responsabilidad y la
+            calidad en nuestros Servicios.
+          </h1>
+          <h5 class="mb-4">
+            Servicios de Calidad, Planificación, Ingenieria y ejecucion de
+            Proyectos
+          </h5>
           <a
             data-mdb-ripple-init
             class="btn btn-outline-light btn-lg m-2"
             href="https://www.instagram.com/prestaservisr.l/"
             role="button"
             rel="nofollow"
-            target="_blank"
-          >Siguenos En Instagram</a
+            target="_blank">Siguenos En Instagram</a
           >
 
-		 
           <a
             data-mdb-ripple-init
             class="btn btn-outline-light btn-lg m-2"
             href="public/Brouchere PRESTASERVIS RL, COOP y C.A..pdf"
             target="_blank"
             role="button"
-          >Descarga nuestra presentacion  y Catalogo de servicios </a
-          >
+            >Descarga nuestra presentacion y Catalogo de servicios
+          </a>
         </div>
       </div>
     </div>
   </div>
-
 </header>
 
+<script>
+  var hamburger = document.getElementById("hamburger");
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      var internalLinks = document.querySelector(".internal-links");
+      if (internalLinks) {
+        internalLinks.classList.toggle("active");
+      }
+    });
+  }
+</script>
 <style>
-	.container-logo{
-		display: flex;
-	}
-	header {
-		margin: 0;
-		padding: 0 0;
-		background: white !important;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-	.bg-image{
-		height: 35vh;
+	.backgroundimg{
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 	}
-	h1, h5{
-		color: white !important;
+  h1 {
+    font-size: 1.8rem;
+  }
+  h5{
+	font-size: 1.3rem;
+  }
+  .contenedor {
+    display: flex;
+  }
+  .logoIMG {
+    display: block;
+    height: 50px;
+    width: auto;
+  }
+  .LogoIMG2 {
+    display: block;
+    height: 50px;
+    width: auto;
+  }
+  header {
+    margin: 0;
+    padding: 0 0;
+    background: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .internal-links {
+    display: flex;
+    gap: 1em;
+  }
+
+  .internal-links a {
+    padding: 1em 0.5em;
+    color: black;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+
+  .internal-links a.active {
+    border-bottom-color: blue;
+  }
+
+  .social-links,
+  .social-links a {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: black;
+    transition: 0.4s;
+  }
+
+  @media (max-width: 720px) {
+    .social-links {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+	h5{
+		font-size: 1rem;
+
 	}
+  }
+
+  @media (max-width: 412px) {
+    .internal-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: white;
+      position: absolute;
+      transition: all 0.8s;
+      top: 80px;
+      left: 0;
+      padding: 1em;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .internal-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 0.8rem;
+    }
+	h5{
+		font-size: 0.7rem;
+		
+	}
+    nav {
+
+      position: relative;
+      transition: all 0.8s;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 </style>

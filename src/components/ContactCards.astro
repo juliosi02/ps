@@ -36,15 +36,40 @@
 </div>
 
 <style>
-  .row{
-    position: relative;
-   
-    width: 200%;
-    margin-left: -50%;
-  }
+    .row{
+        justify-content: center;
+        padding: 25px;
+        margin: 0 auto; 
+        align-items: center;
+        
+    
+    }
+    
   .card{
     width: 350px;
     border-radius: 25px;
     
+  }
+  @media (max-width: 412px) {
+    .card{
+    width: 300px;
+    border-radius: 25px;
+  }
+  .card-title{
+    font-size: 0.8rem;
+  }
+  .card-header{
+    font-size: 1.2rem;
+  }
+  .card-text{
+    font-size: 0.8rem;
+  }
+  .btn .btn-primary{
+    font-size: 0.8rem;
+  }
+  .card{
+    margin-bottom: 10px;
+    
+  }
   }
 </style>

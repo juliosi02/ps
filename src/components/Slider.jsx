@@ -11,8 +11,19 @@ function Slider() {
   return (
     <>
       <Swiper
-        slidesPerView={6}
+      
+       breakpoints={{
+        // when window width is >= 320px (mobile)
+        320: {
+          slidesPerView: 3,
+        },
+        // when window width is >= 768px (tablet and up)
+        768: {
+          slidesPerView: 6,
+        },
+      }}
         spaceBetween={30}
+        
         loop={true}
         autoplay={{
             delay: 500,
@@ -21,7 +32,7 @@ function Slider() {
           }}
         
        
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -34,14 +45,14 @@ function Slider() {
           <img src="/ALIADOS/GLOBAL.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
+         
           <img src="/ALIADOS/INDUNORCA.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="/ALIADOS/INELECTRA.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
+          
           <img src="/ALIADOS/INSERVEN.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>

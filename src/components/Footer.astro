@@ -4,7 +4,8 @@ const today = new Date();
 
 <footer>
 
-	&copy; {today.getFullYear()} PrestaServis RL. All rights reserved.
+	&copy; {today.getFullYear()} PrestaServis RL. <br>
+	 All rights reserved.
 	<div class="social-links">
 		<div class="logo1">
 			<a href="" target="_blank">
@@ -67,5 +68,18 @@ const today = new Date();
 		position: absolute;
 		margin-right: -80%;
 		width: 150px;
+	}
+	@media (max-width: 412px){
+		.logo1{
+			width: 60px;
+			margin-left: -80%;
+			
+			
+		}
+		.logo2{
+			width: 60px;
+			margin-right: -80%;
+		}
+		
 	}
 </style>

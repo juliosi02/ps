@@ -48,7 +48,7 @@ import Contenido2 from '../components/Contenido2.astro';
 
 <div class="container">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm-6">
       <div class="container">
         <Card
           img="public/serv/servicios (10).png"
@@ -57,7 +57,7 @@ import Contenido2 from '../components/Contenido2.astro';
         />
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-6">
       <div class="container">
         <Card
           img="public/serv/servicios (12).png"
@@ -66,7 +66,7 @@ import Contenido2 from '../components/Contenido2.astro';
         />
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-6">
       <div class="container">
         <Card
           img="public/serv/servicios (5).png"
@@ -212,7 +212,7 @@ import Contenido2 from '../components/Contenido2.astro';
         
       </div>
 
-      <a href="/blog" class="btn btn-primary">Click aqui para mas información →</a>
+      <a href="/blog" class="btn btn-primary botonInformation">Click aqui para mas información →</a>
     </section>
 
     <section id="organization">
@@ -312,13 +312,13 @@ import Contenido2 from '../components/Contenido2.astro';
     <br />
     <section id=" aliadoscomerciales">
       <Aliadosc />
-    </section>
+    </section>  
     <Contenido2/>
     <main>
       <section id="contact">
         <FormContact client:load />
         <div class="container text-center">
-          <a href="/contact" class="btn btn-primary">Click aqui para mas información →</a>
+          <a href="/contact" class=" btn btn-primary botonInformation">Click aqui para mas información →</a>
         </div>
       </section>
     </main>
@@ -326,6 +326,7 @@ import Contenido2 from '../components/Contenido2.astro';
     <Footer />
   </body>
   <style>
+ 
     #organization{
       padding-bottom: 3%;
       padding-top: 5%;
@@ -344,6 +345,18 @@ import Contenido2 from '../components/Contenido2.astro';
       display: flex;
       justify-content: center;
       max-width: 20%;
+    }
+  
+    @media (max-width: 412px) {
+      .botonInformation{
+     
+      font-size: 12px !important;
+      display: flex !important;
+      flex-direction: row;
+      border-radius: 25px;
+      padding-inline: 80px !important;
+     
+    }
     }
   </style>
 </html>
